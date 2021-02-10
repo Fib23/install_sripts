@@ -1,0 +1,1 @@
+add Redirect permanent / https://$add/nextcloud in  /etc/apache2/sites-available/000-default.conf
