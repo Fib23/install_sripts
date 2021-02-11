@@ -1,7 +1,5 @@
 #!/bin/bash
 #
-#https://www.redmine.org/projects/redmine/wiki/HowTo_Install_Redmine_on_Debian_9
-#
 if [ "$1" = "-h" ] || [ "$1" = "" ] || [ "$1" = "--help" ] || [ "$2" = "" ]
 then
   echo "Usage:"
