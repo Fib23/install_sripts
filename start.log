@@ -1,0 +1,63 @@
+    1  apt -y install slapd ldap-utils
+    2  slapcat
+    3  apt -y purge slapd ldap-utils
+    4  nano /etc/hosts
+    5  hostnamectl set-hostname ldap.belpak.by --static
+    6  apt -y install slapd ldap-utils
+    7  slapcat
+    8  nano basedn.ldif
+    9  ldapadd -x -D cn=admin,dc=belpak,dc=by -W -f basedn.ldif
+   10  slappasswd
+   11  slappasswd > ldapusers.ldif
+   12  slappasswd > ldapusers.ldif
+   13  cat ldapusers.ldif 
+   14  slappasswd >> ldapusers.ldif
+   15  cat ldapusers.ldif 
+   16  slappasswd >> ldapusers.ldif
+   17  cat ldapusers.ldif 
+   18  slapcat
+   19  nano ldapusers.ldif
+   20  ldapadd -x -D cn=admin,dc=belpak,dc=by -W -f ldapusers.ldif
+   21  nano ldapusers.ldif
+   22  ldapadd -x -D cn=admin,dc=belpak,dc=by -W -f ldapusers.ldif
+   23  ldapadd -x -D cn=admin,dc=belpak,dc=by -W -f ldapusers.ldif
+   24  nano talk.sh
+   25  chmod +x talk.sh 
+   26  ./talk.sh 
+   27  bash talk.sh 
+   28  apt install curl
+   29  wget https://deac-fra.dl.sourceforge.net/project/lam/LAM/7.4/ldap-account-manager_7.4-1_all.deb
+   30  dpkg -i ldap-account-manager_7.4-1_all.deb 
+   31  apt install 
+   32  apt --fix-broken install
+   33  dpkg -i ldap-account-manager_7.4-1_all.deb 
+   34  occ app:install documentserver_community
+   35  nano ldapusers.ldif
+   36  history 
+   37  slappasswd
+   38  nano ldapusers.ldif
+   39  history 
+
+
+
+cat /root/ldapusers.ldif
+ dn: uid=jmutai,ou=customers,dc=belpak,dc=by
+ objectClass: inetOrgPerson
+ objectClass: posixAccount
+ objectClass: shadowAccount
+ cn: Josphat
+ sn: Mutai
+ userPassword: {SSHA}MjalA3VUK4Jfe4VqGtS6ku4fmuLcTJMw
+ loginShell: /bin/bash
+ homeDirectory: /home/testuser
+ uidNumber: 3000
+ gidNumber: 3000
+
+cat /etc/hots
+127.0.0.1       localhost
+$ipv4      ldap.belpak.by
+
+slappasswd
+New password: 
+Re-enter new password: 
+{SSHA}MjalA3VUK4Jfe4VqGtS6ku4fmuLcTJMw
