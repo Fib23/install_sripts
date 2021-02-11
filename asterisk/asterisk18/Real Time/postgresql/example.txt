@@ -1,0 +1,3 @@
+http://asterisk.ru/knowledgebase/Asterisk+RealTime  - описание
+http://asterisk.ru/knowledgebase/asterisk+realtime+postgresql
+https://www.howtoforge.com/installing-and-configuring-asterisk-1.6-and-postgresql-to-manage-cdr-and-realtime-config-on-debian - пример
